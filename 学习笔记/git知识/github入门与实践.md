@@ -1,21 +1,21 @@
-#github入门与实践
+# github入门与实践
 
 
-##git与github
+## git与github
 github是使用Git的托管服务。是网络上提供Git仓库的一项服务。
 git是开发者将源代码存入名叫“Git仓库”的资料库中并加以使用。
 
-##集中型与分散型
+## 集中型与分散型
 集中型：只有一个仓库，例如SVN
 分散型：多个仓库，例如Git
 
 
-##使用GitHub的前期准备
+## 使用GitHub的前期准备
 - 创建账户
 - 设置SSH Key
 - 添加公开密钥
 
-###创建账户
+### 创建账户
 本人操作就是用自己的邮箱注册一个，然后在本地的git也使用相同的账户。然后生成公开密钥。
 
 设置本地姓名和邮箱
@@ -29,7 +29,7 @@ $ git config --global user.email "your_email@example.com"
 $ ssh-keygen -t rsa -C"your_email@example.com"
 </code></pre>
 
-###设置SSH Key
+### 设置SSH Key
 在github中把生成的公开密钥输入进去验证即可。
 
 查看生成的公开密钥
@@ -39,8 +39,8 @@ ssh-rsa 公开密钥的内容 your_email@example.com
 </code></pre>
 
 然后在github中添加公钥。
-
-###添加公开密钥
+ 
+### 添加公开密钥
 
 通过手中的私钥进行认证和通信
 <pre><code>
@@ -53,8 +53,8 @@ Hi hirocastest! You've successfully authenticated, but GitHub does not
 provide shell access.
 </code></pre>
 
-##通过实际操作学习Git
-##基本操作
+## 通过实际操作学习Git
+## 基本操作
 - git init----初始化仓库
 - git status----查看仓库的状态
 - git add----向暂存区中添加文件
@@ -64,15 +64,15 @@ provide shell access.
 
 git commit -am等同于git add 与git commit
 
-###git init
+### git init
 本人感觉：随便找个空文件夹即可。初始化完得到.git隐藏文件夹。
 
-###git commit
+### git commit
 添加并且添加描述
 <pre><code>git commit -m "具体描述随意"
 </code></pre>
 
-###git log
+### git log
 只显示信息的第一行
 <pre><code>log --pretty=short
 </code></pre>
@@ -85,7 +85,7 @@ git commit -am等同于git add 与git commit
 git log -p 指定文件
 </code></pre>
 
-###git diff
+### git diff
 查看工作树和暂存区的差别
 <pre><code>git diff
 </code></pre>
@@ -94,17 +94,17 @@ git log -p 指定文件
 <pre><code>git diff HEAD
 </code></pre>
 
-##分支的操作
+## 分支的操作
 分支的操作可以在不互相影响的情况下同时进行多个功能的开发。
 每个分支的数据可以完全不一样。
-###git branch——显示分支一览表
+### git branch——显示分支一览表
 git branch可以将分支名列表显示，同时确定当前所在列表。
 * 后面的是你当前的分支。
 <pre><code>$ git branch
 * master
 </code></pre>
 
-###git checkout -b——创建、切换分支
+### git checkout -b——创建、切换分支
 <pre><code>$ git checkout -b feature-A
 Switched to a new branch 'feature-A'
 </code></pre>
@@ -114,41 +114,41 @@ $ git checkout feature-A
 </code></pre>
 这两段代码作用相同。
 
-###git checkout 
+### git checkout 
 切换分支的功能。
 <pre><code>$ git checkout master
 Switched to branch 'master'
 </code></pre>
 
-###git checkout -
+### git checkout -
 切换回上一个分支
 <pre><code>$ git checkout -
 Switched to branch 'feature-A'
 </code></pre>
 
 
-###特性（Topic）分支
+### 特性（Topic）分支
 特性分支：集中实现单一特性（主题），除此之外不进行任何作业的分支。在日常开发中，往往会创建数个特性分支，同时在此之外再保留一个随时可以发布软件的稳定分支。稳定分支的角色通常由 master 分支担当。
 
 
-###主干分支
+### 主干分支
 主干分支是刚才我们讲解的特性分支的原点，同时也是合并的终点。通常人们会用 master 分支作为主干分支。主干分支中并没有开发到一半的代码，可以随时供他人查看。有时我们需要让这个主干分支总是配置在正式环境中，有时又需要用标签 Tag 等创建版本信息，同时管理多个版本发布。拥有多个版本发布时，主干分支也有多个。
 
-###git merge——合并分支
+### git merge——合并分支
 <pre><code>git merge --no-ff feature-A</code></pre>
 
 
-###git log --graph——以图表形式查看分支
+### git log --graph——以图表形式查看分支
 可以清楚地看到特性分支提交的内容已被合并。特性分支的创建以及合并也都很清楚。
 
-##更改提交的操作
-###git reset——回溯历史版本
+## 更改提交的操作
+### git reset——回溯历史版本
 Git的另一个特征是可以灵活操作历史版本。
 要让仓库的 HEAD、暂存区、当前工作树回溯到指定状态，需要用到 git rest --hard命令。只要提供目标时间点的哈希值 A，就可以完全恢复至该时间点的状态。
 <pre><code>$ git reset --hard fd0cbf0d4a25f747230694d95cac1be72d33441d 
 HEAD is now at fd0cbf0 Add index</code></pre>
 
-###git reflog
+### git reflog
 查看当前仓库执行过的操作日志。
 在日志中，我们可以看到 commit、 checkout、 reset、 merge 等 Git 命
 令的执行记录。
@@ -168,22 +168,22 @@ a6c4e00 HEAD@{9}: commit: Add feature-A
 4e9e597 HEAD@{12}: commit (initial): First commit
 </code></pre>
 
-###git commit --amend
+### git commit --amend
 修改提交信息。
 <pre><code>$ git commit --amend
 </code></pre>
 
-###git rebase -i————压缩历史
+### git rebase -i————压缩历史
 
-##推送至远程仓库
+## 推送至远程仓库
 
-###git remote add————添加远程仓库
+### git remote add————添加远程仓库
 git remote add origin 你要添加的git路径。
 <pre><code>$ git remote add origin git@github.com:github-book/git-tutorial.git
 </code></pre>
 按照上述格式执行 git remote add命令之后， Git 会自动将git@github.com:github-book/git-tutorial.git远程仓库的名称设置为 origin（标识符）。
 
-###git push————推送至远程仓库
+### git push————推送至远程仓库
 
 1.推送至master分支
 <pre><code>$ git push -u origin master
@@ -200,8 +200,8 @@ To github.com:cbd1020819393/git-test.git
 Branch test-E set up to track remote branch test-E from origin.
 </code></pre>
 
-##从远程仓库获取
-###git clone———— 获取远程仓库
+## 从远程仓库获取
+### git clone———— 获取远程仓库
 <pre><code>$ git clone git@github.com:cbd1020819393/git-test.git
 Cloning into 'git-test'...
 remote: Counting objects: 19, done.
@@ -212,7 +212,7 @@ Resolving deltas: 100% (2/2), done.
 </code></pre>
 执行 git clone命令后我们会默认处于 master 分支下，同时系统会自动将 origin 设置成该远程仓库的标识符。
 
-###git branch -a
+### git branch -a
 <pre><code>$ git branch -a
 * master
   remotes/origin/HEAD -> origin/master
@@ -222,7 +222,7 @@ Resolving deltas: 100% (2/2), done.
 我们用 git branch -a命令查看当前分支的相关信息。添加 -a
 参数可以同时显示本地仓库和远程仓库的分支信息。
 
-###获取远程的分支
+### 获取远程的分支
 <pre><code>$ git checkout -b test-E origin/test-E
 Branch test-E set up to track remote branch test-E from origin.
 Switched to a new branch 'test-E'
@@ -230,12 +230,12 @@ Switched to a new branch 'test-E'
 -b 参数的后面是本地仓库中新建分支的名称。为了便于理解，我
 们仍将其命名为 test-E，让它与远程仓库的对应分支保持同名。
 
-###向本地的test-E分支提交更改，推送test-E分支
+### 向本地的test-E分支提交更改，推送test-E分支
 从远程仓库获取 test-E 分支，在本地仓库中提交更改，再将
 test-E 分支推送回远程仓库，通过这一系列操作，就可以与其他开发
 者相互合作，共同培育 test-E 分支，实现某些功能。
 
-###git pull———获取最新的远程仓库分支
+### git pull———获取最新的远程仓库分支
 <pre><code>$ git pull origin test-E
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (2/2), done.

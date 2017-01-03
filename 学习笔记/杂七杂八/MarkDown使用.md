@@ -36,6 +36,11 @@
 ##代码引用
 `hello world`
 
+##多行代码引用
+在Tools中把markDown的改成github的markdown然后用
+```xml,javascript等等标签
+```
+
 ##多段代码引用
 <pre><code>
 第一段代码 hello world										
