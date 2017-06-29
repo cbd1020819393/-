@@ -1,0 +1,319 @@
+# HTML5
+
+## HTML5规则：
+1.新特性应该基于HTML、CSS、DOM以及JavaScript。
+2.减少对外部插件的需求（比如Flash）。
+3.更优秀的错误处理。
+4.更多取代脚本的标记。
+5.HTML5应该独立于设备。
+6.开发进程应对公众透明。
+
+## 新特性
+HTML5中一些有趣的新特性：
+1.用于绘画的canvas元素。
+2.用于媒介回放的video和audio元素。 
+3.对本地离线存储的更好的支持。
+4.新的特殊内容元素，比如：article、footer、header、nav、section。
+5.新的表单控件，比如：calendar、date、time、email、url、search。
+
+## HTML5视频
+HTML5提供了展示视频的标准。
+
+### video元素支持的三种视频格式
+格式	IE	Firefox	Opera	Chrome	Safari
+Ogg	    No	 3.5+	10.5+	5.0+	 No
+MPEG4	9.0+  No	 No	    5.0+	 3.0+
+WebM	No	 4.0+	10.6+	6.0+	 No
+
+Ogg=带有Theora视频编码和Vorbis音频编码的Ogg文件
+MPEG4=带有H.264视频编码和AAC音频编码的MPEG4文件
+WebM=带有VP8视频编码和Vorbis音频编码的WebM文件
+
+例：<video src="movie.ogg" width="320" height="240" controls="controls">
+	您的浏览器不支持此视频格式的播放</video>
+	
+video 元素允许多个source元素。source元素可以链接不同的视频文件。浏览器将使用第一个可
+识别的格式：
+<video width="320" height="240" controls="controls">
+  <source src="movie.ogg" type="video/ogg">
+  <source src="movie.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+### <video>标签的属性
+autoplay 如果出现该属性，则视频在就绪后马上播放。
+controls 如果出现该属性，则向用户显示控件，比如播放按钮。
+height   设置播放器的高度。
+loop	 循环播放。
+preload  如果出现该属性，则视频在页面加载时进行加载，并预备播放。
+		 如果使用“autoplay”，则忽略该属性。
+src		 要播放的视频URL。
+width·   设置播放器的宽度。
+
+### video+DOM
+HTML5<video>元素同样拥有方法、属性和事件。
+其中的方法用于播放、暂停以及加载等。
+其中的属性（比如时长、音量等）可被读取或设置。
+
+### HTML5<video>-方法、属性和事件：
+方法					属性				事件
+play()				currentSrc				play
+pause()				currentTime				pause
+load()				videoWidth				progress
+canPlayType			videoHeight				error
+					duration				timeupdate
+					ended					ended
+					error					abort
+					paused					empty
+					muted					emptied
+					seeking					waiting
+					volume				loadedmetadata
+					height	 
+					width	
+
+在所有属性中，只有videoWidth和videoHeight属性是立即可用的。
+在视频的元数据已加载后，其他属性才可用。
+
+## HTML5音频
+
+### audio元素支持的三种音频格式
+格式	 	IE 9	Firefox 3.5	Opera 10.5	Chrome 3.0	Safari 3.0
+Ogg Vorbis	 			√			√			√	 
+MP3			√	 	 							√			√	
+Wav	 					√			√			 			√
+
+音频标签基本于视频相同。不在赘述。
+
+## HTML5拖放
+拖放（Drag和drop）是HTML5标准的组成部分。
+
+### 拖放
+拖放是一种常见的特性，即抓取对象以后拖到另一个位置。
+在HTML5中，拖放是标准的一部分，任何元素都能够拖放。
+
+## HTML5画布
+canvas元素用于在网页上绘制图形。
+
+### HTML5画布
+HTML5的canvas元素使用JavaScript在网页上绘制图像。
+画布是矩形区域，可以控制每个像素。
+
+### 创建Canvas元素
+<canvas id="canvas" width="200" height="100"></canvas>
+
+### 通过javaScript来绘制
+canvas本身没有绘图能力的。所有的绘制工作必须在javaScript内部完成。
+
+## HTML5内联SVG
+
+### SVG
+1.SVG是可伸缩矢量图形（Scalable Vector Graphics）。
+2.SVG用于定义用于网络的基于矢量的图形。
+3.SVG使用XML格式定义图形。
+4.SVG图像在放大或改变尺寸的情况下其图形质量不会有损失。
+5.SVG是万维网联盟的标准。
+
+### SVG的优势
+与其他图像格式相比（比如JPEG和GIF），使用SVG的优势在于：
+1.SVG图像可通过文本编辑器来创建和修改。
+2.SVG图像可被搜索、索引、脚本化或压缩。
+3.SVG图像可在任何的分辨率下被高质量的打印。
+4.SVG是可伸缩的。
+5.SVG可在图像质量不下降的情况下被放大。
+
+### SVG使用
+例：<!DOCTYPE html>
+<html>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+  <polygon points="100,10 40,180 190,60 10,60 160,180"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+
+</body>
+</html>
+
+## Canvas与SVG的比较
+http://www.w3school.com.cn/html5/html_5_canvas_vs_svg.asp
+
+## HTML5地理定位
+HTML5 Geolocation(地理定位)用于定位用户的位置。
+隐私问题，需要用户同意才可使用。
+
+### HTML5使用地理定位
+使用getCurrentPosition（）方法来获得用户的位置。
+
+### 异常处理
+getCurrentPosition（）方法的第二个参数用于处理错误。
+错误代码：
+1.Permission denied-用户不允许地理定位。
+2.Position unavaiable-无法获取当前位置。
+3.Timeout-操作超时。
+
+## HTML5 Web存储
+
+### 在客户端存储数据
+1.localStorage-没有时间限制的数据存储。
+2.sessionStorage-针对一个session的数据存储。
+之前，这些都是由 cookie 完成的。但是 cookie 不适合大量数据的存储，因为它们由每个对服务器的请求来传递，这使得 cookie 速度很慢而且效率也不高。
+在 HTML5 中，数据不是由每个服务器请求传递的，而是只有在请求时使用数据。它使在不影响网站性能的情况下存储大量数据成为可能。
+
+HTML5使用JavaScript来存储和访问数据。
+
+### localStorage方法
+localStorage方法存储的数据没有时间限制。
+使用localStorage
+例：<script type="text/javascript">
+	localStorage.lastname="Smith";
+	document.write(localStorage.lastname);
+	</script>
+	
+### sessionStorage方法
+sessionStorage方法针对一个session进行数据存储。当用户关闭浏览器窗口后，数据会被删除。
+使用sessionStorage 
+例：<script type="text/javascript">
+	sessionStorage.lastname="Smith";
+	document.write(sessionStorage.lastname);
+	</script>
+
+## HTML5应用程序缓存
+使用HTML5，通过创建cache manifest文件，可以轻松地创建web应用的离线版本。
+
+### 应用程序缓存（Application Cache）
+HTML5 引入了应用程序缓存，这意味着 web 应用可进行缓存，并可在没有因特网连接时进行访问。
+应用程序缓存为应用带来三个优势：
+离线浏览 - 用户可在应用离线时使用它们
+速度 - 已缓存资源加载得更快
+减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。
+
+### Cache Manifest基础
+在<html>标签中包含manifest属性：
+<!DOCTYPE HTML>
+<html manifest="demo.appcache">
+...
+</html>
+
+mainfest文件需要配置正确的MIME-type，即"text/cache-manifest"。必须在web服务器上进行配置。
+
+### Manifest文件
+manifest文件可分为三个部分：
+1.CACHE MANIFEST--在此标题下列出的文件将在首次下载后进行缓存。
+2.NETWORK--在此标题下列出的文件需要与服务器连接，且不会被缓存。
+3.FALLBACK--在此标题下列出的文件规定当页面无法访问时的回退页面（比如404页面）。
+
+### 更新缓存
+一旦应用被缓存，它就会保持缓存直到发生下列情况：
+用户清空浏览器缓存
+manifest 文件被修改（参阅下面的提示）
+由程序来更新应用缓存
+
+## HTML5 Web Workers
+web worker是运行在后台的JavaScript，不会影响页面的性能。
+
+### 什么是 web worker 
+当在 HTML 页面中执行脚本时，页面的状态是不可响应的，直到脚本已完成。
+web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行。
+
+有点像android中新开一个线程，不影响主线程。
+
+### 创建web worker对象
+if(typeof(w)=="undefined")
+  {
+  w=new Worker("demo_workers.js");
+  }
+  
+### 终止Web worker对象
+w.terminate();
+
+## HTML5服务器发送事件
+HTML5服务器发送事件（server-sent event）允许网页获得来自服务器的更新。
+
+## Server-Sent事件-单向消息传递
+Server-Sent 事件指的是网页自动获取来自服务器的更新。
+以前也可能做到这一点，前提是网页不得不询问是否有可用的更新。通过服务器发送事件，更新能够自动到达。
+
+### 接受Server-Sent事件通知
+EventSource 对象用于接收服务器发送事件通知：
+实例
+var source=new EventSource("demo_sse.php");
+source.onmessage=function(event)
+  {
+  document.getElementById("result").innerHTML+=event.data + "<br />";
+  };
+  
+## HTML5输入类型
+1.email
+2.url
+3.number
+4.range
+5.Date pickers(date,month,week,datetime,datetime-local)
+6.search  
+7.color 
+
+### email
+email类型用于应该包含e-nail地址的输入域。
+在提交表单时，会自动验证email域的值。
+例：<input type="email" name="user_email">
+
+### url
+url类型用于应该包含url地址的输入域。
+在提交表单时，会自动验证url域的值。
+例：<input type="url" name="user_url"/>
+
+### number
+number类型用于包含数值的输入域。
+例：<input type="number" name="points" min="1" max="10"/>
+
+### Date Pickers
+五种可供选择的新输入类型：
+1.date-选取日、月、年
+2.month-选取月、年
+3.week-选取周、年
+4.time-选取时间（小时和分钟）
+5.datetime-选取时间、日、月、年（UTC时间）
+6.datetime-local-选取时间、日、月、年（本地时间）
+例：<input type="date" name="user_date"/>
+
+### search
+search类型用于搜索域，比如站点搜索或Google搜索。
+search域显示为常规的文本域。
+
+## HTML5表单元素
+1.datalist
+2.keygen
+3.output
+
+### datalist元素
+datalist元素规定输入域的选项列表。
+列表是通过datalist内的option元素创建的。
+如需把datalist绑定到输入域，请用输入域的list属性引用datalist的id。
+
+### Keygen元素
+keygen元素的作用是提供一种验证用户的可靠方法。
+Keygen元素是密钥对生成器（key-pair generator）。当提交表单时，会生成两个键，
+一个是私钥，一个是公钥。私钥存储于客户端，公钥被发送到服务器。公钥用于验证用户的
+客户端证书。
+
+### output元素
+output元素用于不同类型的输出，比如计算或脚本输出。
+
+## HTML5表单属性
+新的form属性：
+1.autocomplete
+2.novalidate
+新的input属性：
+1.autocomplete
+2.autofocus
+3.form
+4.form overrides (formaction, formenctype, formmethod, formnovalidate, formtarget)
+5.height、width
+6.list
+7.min,max和step
+8.multiple
+9.pattern(regexp)
+10.placeholder
+11.required
+
+
+

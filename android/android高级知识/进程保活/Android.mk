@@ -1,0 +1,11 @@
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES:=awaken.c
+LOCAL_C_INCLUDES := $(JNI_H_INCLUDE)
+LOCAL_MODULE := awaken
+LOCAL_SHARED_LIBRARIES := libutils
+LOCAL_PRELINK_MODULE := false
+LOCAL_MODULE_TAGS :=optional
+LOCAL_JNI_SHARED_LIBRARIES := awaken.so
+LOCAL_LDLIBS += -L$(SYSROOT)/usr/lib -llog
+include $(BUILD_SHARED_LIBRARY)

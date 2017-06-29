@@ -1,0 +1,538 @@
+# HTML基础教程
+## 简介
+1. HTML是超文本标记语言（Hyper Text Markup Language）
+2. HTML不是一种编程语言，而是一种标记语言（markup language）
+3. 标记语言是一套标记标签（markup language）
+4. HTML使用标记标签来描述网页
+
+## HTML标签
+1. HTML标签是由尖括号包围的关键词，比如<html>
+2. HTML标签通常是成对出现的，比如<b>和</b>
+3. 标签中的第一个标签是开始标签，第二个标签是结束标签。
+4. 开始和结束标签也被称为开放标签和闭合标签。
+
+## HTML文档=网页
+1. HTML文档描述网页
+2. HTML文档包含HTML标签和纯文本
+3. HTML文档也被称为网页
+
+## HTML标题
+HTML标题（Heading）是通过<h1>-<h6>等标签来进行定义的。
+<h1>定义最大的标题。<h6>定义最小的标题。
+确保HTML heading标签只用于标题。不要仅仅为了产生粗体或大号的文本而使用标题。
+搜索引擎使用标题为您的网页的结构和内容编制索引。
+
+## HTML段落
+HTML段落是通过<p>标签来进行定义的。
+如果希望在不产生一个新段落的情况下进行换行（新行），请使用<br/>标签。
+
+## HTML链接
+HTML链接是通过<a>标签来进行定义的。
+
+## HTML图像
+HTML图像是通过<img>标签进行定义的。
+
+## HTML元素
+HTML元素指的是从开始标签（start tag）到结束标签（end tag）的所有代码。
+开始标签被称为开放标签（opening tag），结束标签称为（闭合标签）。
+
+## HTML元素语法
+1. HTML元素以开始标签起始。
+2. HTML元素以结束标签终止。
+3. 元素的内容是开始标签与结束标签之间的内容。
+4. 某些HTML元素具有空内容（empty content）。
+5. 空元素在开始标签中进行关闭，以开始标签的结束而结束。
+6. 大多数HTML元素可拥有属性。
+
+## 嵌套的HTML元素
+大多数HTML元素可以嵌套（可以包含其他HTML元素）。
+HTML文档由嵌套的HTML元素构成。
+
+## HTML属性
+HTML标签可以拥有属性。属性提供了有关HTML元素的更多的信息。
+属性总是以名称/值对的形式出现，比如：name="value"。
+属性总是在HTML元素的开始标签中规定。
+
+## HTML水平线
+<hr/>标签在HTML页面中创建水平线。
+hr元素可用于分隔内容。
+
+## HTML注释
+可以将注释插入HTML代码中，可以提高代码可读性。浏览器会忽略注释
+
+## HTML样式
+style属性用于改变HTML元素的样式。
+提供一种改变所有HTML元素的样式的通用方法。
+样式是HTML4引入的，它是一种信的首选的改变HTML元素样式的方式。
+最好不要使用被废弃的HTML标签及属性。
+
+1. background-color替换bgcolor
+2. style替换<font>标签
+3. text-align替换align
+
+## HTML文本格式化
+### 文本格式化标签
+<b> 定义粗体文本。
+<big> 定义大号字。
+<em> 定义着重文字。
+<i> 定义斜体字。
+<small> 定义小号字。
+<strong> 定义加重语气。
+<sub> 定义下标字。
+<sup> 定义上标字。
+<ins> 定义插入字。
+<del> 定义删除字。
+
+### "计算机输出"标签
+<code> 定义计算机代码。
+<kbd> 定义键盘码。
+<samp> 定义计算机代码样本。
+<tt> 定义打字机代码。
+<var> 定义变量。
+<pre> 定义预格式文本。
+
+### 引用、引用何术语定义
+<abbr> 定义缩写。
+<acronym> 定义首字母缩写。
+<address> 定义地址。
+<bdo> 定义文字方向。
+<blockguote> 定义长的引用。
+<q> 定义短的引用。
+<cite> 定义引用、引证。
+<dfn> 定义一个定义项目。
+
+## HTML引用
+1. HTML<q>元素定义短的引用。浏览器通常会为<q>元素包围引号。
+2. HTML<blockquote>元素定义被引用的节。浏览器通常会对<blockquote>元素进行缩进处理。
+
+### HTML缩略词abbr
+HTML<abbr>元素定义缩写或首字母缩略语。
+
+### HTML dfn
+HTML<dfn>元素也可以定义缩写。
+
+### 用于联系信息的HTML<address>
+HTML<address>元素定义文档或文章的联系信息（作者/拥有者）。
+此元素通常以斜体显示。大多数浏览器会在此元素前后添加折行。
+
+### 用于著作标题的HTML<cite>
+HTML<cite>元素定义著作的标题。
+浏览器通常会以斜体显示<cite>元素。
+
+### 定义文本方向HTML<bdo>
+HTML<bdo>元素定义双流向覆盖（bi-directional override）。
+
+## HTML计算机代码元素
+
+### HTML键盘格式
+HTML<kbd>元素定义键盘
+
+### HTML样本格式
+HTML<samp>元素定义计算机输出
+
+### HTML代码格式
+HTML<code>元素定义编程代码
+
+### HTML变量格式化
+HTML<var>元素定义数学变量
+
+## HTML注释
+
+### HTML注释标签
+注释标签 <!-- 与 --> 用于在 HTML 插入注释。
+
+## HTML CSS
+
+### 外部样式表
+当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观。
+
+例：
+<head>
+<link> rel="stylesheet" type="text/css" href="mystyle.css"
+</head>
+
+
+### 内部样式表
+当单个文件需要特别样式时，就可以使用内部样式表。你可以在head部分通过<style>标签定义内部样式表。
+
+例：
+<head>
+<style type="text/css">
+body {background=color:red}
+p {margin-left:20px}
+</style>
+</head>
+
+### 内联样式
+当特殊的样式需要应用到个别元素时，就可以使用内联样式。使用内联样式的方法是在相关的标签中使用样式属性。样式属性可以包含任何CSS属性。
+
+例：
+<p style="color: red; margin-left:20px">
+This is a cbd
+</p>
+
+
+## HTML链接
+我们通过使用<a>标签在HTML中创建链接。
+有两张使用<a>标签的方式：
+1.通过使用href属性-创建指向另一个文档的链接。
+2.通过使用name属性-创建文档内的书签。
+
+格式：<a href="url">Link text</a>
+
+
+例：<a href="http://www.w3school.com.cn/">Visit W3School</a>
+
+链接文本不必一定是文本。图片或其他HTML元素都可以成为链接。
+
+target属性：使用Targer属性，你可以定义被链接的文档在何处显示。
+name属性：name属性规定锚（anchor）的名称。你可以使用name属性创建HTML页面中的书签。
+
+命名锚的语法：<a name="label">锚</a>
+
+指向锚的链接：<a href="#tips">有用的提示</a>
+
+指向其他页面中锚的链接：<a href="http://www.w3school.com.cn/html/html_links.asp#tips">有用的提示</a>
+
+## HTML图像
+在HTML中，图像由<img>标签定义。
+<img>是空标签。意思是说，它只包含属性，并且没有闭合标签。
+定义的语法：<img src="url"/>
+
+### 替换文本属性（Alt）
+alt属性用来为图像定义一串预备的可替换的文本。替换文本属性的值是用户定义的。
+定义的语法：<img src="boat.gif" alt="Big Boat">
+当浏览器无法载入图像是，替换文本属性可以更友好的显示信息。
+
+## HTML表格
+表格由table标签定义。每个表格均有若干行（由<tr>标签定义。），
+每行被分割为若干个单元格（由<td>标签定义）。字母td指表格数据（table data），
+即数据单元格内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。
+
+### 表格和表框属性
+如果不定义边框属性，表格将不显示边框。
+
+### 表格的表头
+表格的表头使用<th>标签进行定义。
+大多数浏览器会把表头显示为粗体居中的文本：
+<table border="1">
+<tr>
+<th>Heading</th>
+<th>Another Heading</th>
+</tr>
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td>
+</tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td>
+</tr>
+</table>
+
+### 表格中的空单元格
+在一些浏览器中，没有内容的表格单元显示的不太友好。
+如果某个单元格是空的（没有内容），浏览器可能无法显示出单元格的边框。
+
+
+## HTML列表
+HTML支持有序、无序和定义列表。
+
+### 无序列表
+无序列表是一个项目的列表，此列项使用粗体圆点（典型的小黑圆圈）进行标记。
+无序列表始于<ul>标签。每个列表项始于<li>。
+
+### 有序列表
+同样，有序列表也是一列项目，列表项目使用数字进行标记。
+有序列表始于<ol>标签。每个列表项始于<li>。
+
+### 自定义列表
+自定义列表不仅仅是一项列目，而是项目及其注释的组合。
+自定义列表以<dl>标签开始。每个自定义列表项以<dt>开始。
+每个自定义列表项的定义以<dd>开始。
+
+
+## HTML块（<div>和<span>）
+可以通过<div>和<span>将HTML元素组合起来。
+
+### HTML块元素
+大多数HTML元素被定义为块级元素或内联元素。
+块级元素在浏览器显示时，通常会以新行来开始（结束）。
+例：<h1>,<p>,<ul>。
+
+### HTML内联元素
+内联元素在显示时通常不会以新行开始。
+例：<b>,<td>,<a>。
+
+### HTML<div>元素
+HTML<div>元素时块级元素，它是可用于组合其他HTML元素的容器。
+1.<div>元素没有特定的含义。除此之外，由于它属于块级元素，浏览器会在其前后显示折行。
+2.如果与CSS一同使用，<div>元素可用于对大的内容块设置样式属性。
+3.<div>元素的另一个常见的用途是文档布局。它取代了使用表格定义布局的老式方法。
+使用<table>元素进行文档布局不是表格的正确用法。<table>元素的作用是显示表格化的数据。
+
+### HTML<span>元素
+HTML<span>元素是内联元素，可用作文本的容器。
+<span>元素也没有特定的含义。
+当与CSS一同使用时，<span>元素可用于为部分文本设置样式属性。
+
+## HTML类
+对HTML进行分类（设置类）,使我们能够为元素的类定义CSS样式。
+为相同的类设置相同的样式，或者为不同的类设置不同的样式。
+
+### 分类块级元素
+HTML<div>元素是块级元素。它能够用作其他HTML元素的容器。
+设置<div>元素的类，使我们能够为相同的<div>元素设置相同的类。
+例：
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+</style>
+</head>
+
+<body>
+
+<div class="cities">
+<h2>London</h2>
+<p>London is the capital city of England. 
+It is the most populous city in the United Kingdom, 
+with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="cities">
+<h2>Paris</h2>
+<p>Paris is the capital and most populous city of France.</p>
+</div>
+
+<div class="cities">
+<h2>Tokyo</h2>
+<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.</p>
+</div>
+
+</body>
+</html>
+
+### 分类行内元素
+HTML<span>元素是行内元素，能够用作文本的容器。
+设置<span>元素的类，能够为相同的<span>元素设置相同的样式。
+例：
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+span.red {
+    color:red;
+}
+</style>
+</head>
+
+<body>
+
+<h1>我的<span class="red">重要的</span>标题</h1>
+
+</body>
+</html>
+
+
+## HTML布局
+1.使用<div>元素的HTML布局。
+2.使用HTML5的网站布局。
+3.使用表格的HTML布局。（不推荐）
+
+## HTML响应式Web设计
+定义：
+1.RWD指的是响应式web设计（responsive Web Design）。
+2.RWD能够以可变尺寸传递网页。
+3.RWD对于平板何移动设备是必须的。
+
+创建响应式设计的方式：
+1.自己创建。
+2.使用开源框架。
+
+## HTML框架
+通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。每份HTML文档称为
+一个框架，并且每个框架都独立于其他的框架。
+
+### 框架结构标签-<frameset>
+1.frameset定义如何将窗口分割为框架。
+2.每个frameset定义一系列行或列。
+3.rows/columns的值规定每行或每列占据屏幕的面积。
+
+###框架标签-<frame>
+frame标签定义了方式在每个框架中的HTML文档。这个标签类似于xml中 的include。
+
+## HTML内联框架
+添加iframe的语法：
+<iframe src="URL"></iframe>
+URL指向隔离页面的位置。
+
+### Iframe-设置高度和宽度
+height和width属性用于规定iframe的高度和宽度。
+属性值默认单位是像素，但也可以用百分比来设定（比如"80%"）。
+例：<iframe src="demo_iframe.htm" white="200" height="200"></iframe>
+
+### 删除边框
+frameborder属性规定是否显示iframe周围的边框。
+设置属性值为"0"就可以移除边框。
+例：<iframe src="demo_iframe.htm" frameborder="0"></iframe>
+
+### 使用iframe作为链接的目标
+iframe可用作链接的目标。
+链接的target属性必须引用iframe的name属性。
+例：<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p>
+
+## HTML背景
+### 背景（Backgrounds）
+<body>拥有两个配置背景的标签。背景可以是颜色或者图像。
+1.bgcolor：背景颜色属性将背景设置为某种颜色。属性值可以是十六进制数、RGB值或颜色名。
+2.background:背景属性将背景设置为图像，实现值为图像的URL。
+在最新的HTML标准中已被废弃。应该使用CSS来定义HTML元素的布局和显示属性。
+
+## HTML脚本
+javaScrpt是HTML页面具有更强的动态和交互性。
+
+### HTML script元素
+<script>标签用于定义客户端脚本，比如javaScript。
+script元素即可包含脚本语句，也可通过src属性指向外部脚本文件。
+必须的type属性规定脚本的MIME类型。
+javaScrpt最常用于图片操作、表单验证以及内容动态更新。
+
+### <noscript>标签
+当浏览器禁用脚本时，可以使用<noscript>来提供文案。
+
+## HTML头部元素
+
+### HTML<head>元素
+<head>元素是所有头部元素的容器。<head>内的元素可包含脚本，指示浏览器在何处可以找到
+样式表，提供元信息等。<title>、<base>、<link>、<meta>、<script>、<style>都可以添加到head.
+
+### HTML<base>元素
+<base>标签为页面上的所有链接规定默认地址或默认目标（target）。
+例：
+<head>
+<base href="http://www.w3school.com.cn/images/" />
+<base target="_blank" />
+</head>
+
+### HTML<link>元素
+<link>标签定义文档与外部资源之间的关系。
+
+## HTML字符实体
+HTML中预留字符必须被替换为字符实体。
+
+### HTML实体
+在HTML中，某些字符是预留的。在HTML中不能使用小于号（<）和大于号（>）,浏览器会误认为它们是标签。
+如果希望正确的显示预留字符，必须使用字符实体。
+有两张方式：
+1.&entity_name。&lt。实体名称方式。
+2.&#entity_number。&#60。实体编号方式。
+
+### 不间断空格
+HTML中的常用字符实体是不间断空格（&nbsp;）。
+浏览器会截短HTML中的空格，如果有10个空格，浏览器会删除其中九个。如果真的需要空格，就要使用&nbsp;实体。
+
+## HTML统一资源定位器（URL）
+URL也被称为网址。
+URL可以由单词组成，也可以是数字。
+
+### URL-Uniform Resource Locator（统一资源定位符）
+URL语法：scheme://host.domain:port/path/filename
+scheme-定义因特网服务的类型。最常见的类型时http。
+host-定义域主机（http的默认主机是www）。
+domain-定义因特网域名，比如w3school.com.cn。
+:port-定义主机上的端口号（http的默认端口号是80）
+path-定义服务器上的路径（如果省略，则文档必须位于网站的根目录中）。
+filename-定义文档/资源的名称。
+
+
+## HTML URL 字符编码
+URL编码会将字符转换为可通过因特网传输的格式。
+
+### URL编码
+URL只能使用ASCII字符集来通过英特网进行发送。
+由于URL常常会包含ASCII集合之外的字符，URL必须转换为有效的ASCII格式。
+URL编码使用"%"其后跟随两位的十六进制数来替换非ASCII字符。
+URL不能包含空格。URL编码通常使用+来替换空格。
+
+## HTML表单
+HTML表单用于收集不同类型的用户输入。
+
+### <form>元素
+HTML表单用于收集用户输入。
+<form>元素定义HTML表单。
+
+### HTML表单包含单元素
+表单元素指的是不同类型的input元素、复选框、单选按钮、提交按钮等等。
+
+### <input>元素
+<input>元素有很多形态，根据不同的type属性。
+text：文本。
+radio：定义单选按钮输入（选择多个选择之一）。
+submit：定义提交按钮（提交表单）
+
+### Action属性
+action属性定义在提交表单时执行的动作。
+
+### Method属性
+method属性规定在提交表单时所用的HTTP方法（GET或POST）。
+
+### 用<fieldset>组合表单数据
+<fieldset>元素组合表单中的相关数据。
+<legend>元素为<fieldset>元素定义标题。
+
+## HTML表单元素
+
+### <input>元素 
+上面已经讲过。
+
+### <select>元素（下拉列表）
+<select>元素定义下拉列表
+<option>元素定义待选择的选项。
+
+### <textarea>元素
+<textarea>元素定义多行输入字段（文本域）
+
+### <button>元素
+<button>元素定义可点击的按钮
+
+## HTML输入类型
+text-文本输入
+password-密码输入
+submit-表单提交
+radio-单选按钮
+checkbox-定义复选框
+button-定义按钮
+
+## HTML Input属性
+
+## value属性
+value属性规定输入字段的初始值。
+
+### readonly属性
+规定输入字段只读（不能修改）。
+
+### disabled属性
+规定输入字段是禁用的。
+被禁用的元素是不可用和不可点击的。
+被禁用的元素不会被提交。
+
+### size属性
+规定输入字段的尺寸
+
+### maxlength属性
+规定输入字段允许的最大长度。
+
+
+
+
+
+

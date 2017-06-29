@@ -1,0 +1,165 @@
+# HTML DOM教程
+HTML DOM定义了访问和操作HTML文档的标准方法。
+DOM将HTML文档表达为树结构。
+
+## DOM（Document Object Model）
+DOM是W3C(万维网联盟)的标准。
+DOM定义了访问HTML和XML文档的标准：
+“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”
+W3C DOM 标准被分为 3 个不同的部分：
+核心 DOM - 针对任何结构化文档的标准模型
+XML DOM - 针对 XML 文档的标准模型
+HTML DOM - 针对 HTML 文档的标准模型
+
+### XML DOM
+XML DOM定义了所有XML元素的对象和属性，以及访问它们的方法。
+
+### HTML DOM
+HTML DOM是：
+1.HTML的标准对象模型。
+2.HTML的标准编程接口。
+3.W3C标准。
+HTML DOM定义了所有HTML元素的对象和属性，以及访问它们的方法。
+HTML DOM是关于如何获取、修改、添加或删除HTML元素的标准。
+
+## HTML DOM节点
+在HTML DOM中，所有事物都是节点。DOM是被视为节点树的HTML。
+
+### DOM节点
+根据W3C的HTML DOM标准，HTML文档中的所有内容都是节点：
+1.整个文档是一个文档节点
+2.每个HTML元素是元素节点
+3.HTML元素内的文本是文本节点
+4.每个HTML属性是属性节点
+5.注释是注释节点
+
+### HTML DOM节点树
+HTML DOM 将HTML文档视作树结构。
+通过HTML DOM树中的所有节点均可通过javaScript进行访问。
+所有HTML元素（节点）均可被修改，也可以创建或删除节点。
+http://www.w3school.com.cn/htmldom/dom_nodes.asp
+
+## HTML DOM方法
+方法是我们在节点(HTML元素)上执行的动作。
+
+### 编程接口
+可通过 JavaScript （以及其他编程语言）对 HTML DOM 进行访问。
+所有 HTML 元素被定义为对象，而编程接口则是对象方法和对象属性。
+方法是您能够执行的动作（比如添加或修改元素）。
+属性是您能够获取或设置的值（比如节点的名称或内容）。
+
+### getElementById()方法
+返回带有指定ID的元素
+例：var element=document.getElementById("intro");
+
+### HTML DOM对象-方法和属性
+常用的方法：
+1.getElementById(id)-获取带有指定id的节点（元素）
+2.appendChild(node)-插入新的子节点（元素）
+3.removeChild(node)-删除子节点（元素）
+4.insertBefore(newNode,oldNode)-插入到oldNode之前。
+5.replaceChild（newNode,oldNode）-用newNode替换oldNode。
+常用的属性：
+1.innerHTML-节点（元素）的文本值
+2.parentNode-节点（元素）的父节点
+3.childNodes-节点（元素）的子节点
+4.atributes-节点（元素）的属性节点
+
+## HTML DOM属性
+属性是节点（HTML 元素）的值，您能够获取或设置。
+
+### innerHTML属性
+获取元素内容的最简单方法是使用innerHTML属性。
+innerHTML属性对于获取或替换HTML元素的内容很有用。
+
+### nodeName属性
+nodeName属性规定节点的名称。
+1.nodeName是只读的。
+2.元素节点的nodeName与标签名相同。
+3.元素节点的nodeName与属性名相同。
+4.文本节点的nodeName始终是#text。
+5.文档节点的nodeName始终是#document。
+
+注：nodeName始终包含HTML元素的大写字母标签名。
+
+### nodeValue属性
+nodeValue属性规定节点的值。
+1.元素节点的nodeValues是undefined或null。
+2.文本节点的nodeValues是文本本身。
+3.属性节点的nodeValues是属性值。
+
+### nodeType属性
+nodeType属性返回节点的类型。nodeType时只读的。
+
+元素类型	NodeType
+元素		1
+属性		2
+文本		3
+注释		8
+文档		9
+
+## HTML DOM访问
+访问 HTML DOM-查找HTML元素。
+
+### 访问HTML元素（节点）
+访问HTML元素等同于访问节点，三种方式：
+1.通过使用getElementById()方法
+2.通过使用getElementsByTagName()方法
+3.通过使用getElementsByClassName()方法
+
+## HTML DOM-修改
+修改 HTML=改变元素、属性、样式和事件。
+
+### 修改HTML元素
+1.改变HTML内容
+2.改变CSS样式
+3.改变HTML属性
+4.创建新的HTML元素
+5.删除已有的HTML元素
+6.改变事件（处理程序）
+
+### 创建HTML内容
+改变元素内容最简单的方法是使用innerHTML属性。
+
+### 改变HTML样式
+通过HTML DOM,能够访问HTML元素的样式对象。
+
+### 创建新的HTML元素
+首先必须创建新元素（元素节点），然后把它追加到已有的元素上。
+
+## HTML DOM-事件
+HTML DOM 允许JavaScript对HTML事件作出反应。
+
+### 对事件作出反应
+1.当事件发生时，可以执行JavaScript。
+onclick=JavaScript
+例：<button onclick="displayDate()">试一试</button>
+
+2.使用HTML DOM来分配事件
+例：<script>
+document.getElementById("myBtn").onclick=function(){displayDate()};
+</script>
+
+### onload和onunload事件
+当用户进入或离开页面时，会触发onload和onunload事件。
+
+### onchange事件
+onchange 事件常用于输入字段的验证。
+
+### onmouseover和onmouseout事件
+onmouseover 和 onmouseout 事件可用于在鼠标指针移动到或离开元素时触发函数。
+
+### onmousedown、onmouseup 以及 onclick 事件
+onmousedown、onmouseup 以及 onclick 事件是鼠标点击的全部过程。首先当某个鼠标按钮被点击时，触发 onmousedown 事件，然后，当鼠标按钮被松开时，会触发 onmouseup 事件，最后，当鼠标点击完成时，触发 onclick 事件。
+
+## HTML DOM-导航
+通过HTML DOM,您能够使用节点关系咋节点树中导航。
+
+### HTML DOM节点列表
+getElementsByTagName() 方法返回节点列表。节点列表是一个节点数组。
+
+### DOM根节点
+1.document.documentElement-全部文档
+2.document.body-文档的主体
+
+
